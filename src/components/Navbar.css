@@ -1,44 +1,68 @@
 /* src/components/Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #e6dcc4; /* Color de fondo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #bc8741;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #e6dcc4; /* Color de fondo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #bc8741;
+  text-transform: uppercase;
+}
+
+/* Logo del navbar */
+.navbar-logo img {
+  height: 60px;
+  cursor: pointer;
+}
+
+/* Enlaces del navbar */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-family: 'Montserrat', bold;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #bc8741; /* Color al pasar el mouse */
+  font-family: 'Montserrat', bold;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Cambiar dirección de los elementos */
+      align-items: flex-start; /* Alinear elementos al inicio */
+      padding: 1rem; /* Ajustar padding */
   }
-  
-  .navbar-logo img {
-    height: 60px;
-    cursor: pointer;
-  }
-  
+
   .navbar-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+      flex-direction: column; /* Cambiar dirección de los enlaces */
+      gap: 1rem; /* Ajustar espacio entre enlaces */
+      width: 100%;
   }
-  
+
   .navbar-links li {
-    font-size: 0.8rem;
-    font-weight: 800;
-    font-family: 'Montserrat', bold;
-
+      font-size: 1rem; /* Ajustar tamaño de fuente */
+      width: 100%;
+      text-align: left; /* Alinear texto a la izquierda */
   }
-  
+
   .navbar-links a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease;
+      padding: 0.5rem 0; /* Ajustar padding para enlaces */
   }
-  
-  .navbar-links a:hover {
-    color: #bc8741; /* Color al pasar el mouse */
-    font-family: 'Montserrat', bold;
-
-  }
-  
+}
