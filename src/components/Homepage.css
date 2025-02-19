@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 700px; /* Reducido para mejor diseño */
+    max-width: 700px;
     width: 100%;
 }
 
@@ -59,7 +59,6 @@
     font-weight: 700;
     margin-bottom: 10px;
     text-align: center;
-
 }
 
 .text-container h3 {
@@ -69,8 +68,8 @@
     font-family: 'Goudy', bold;
     margin-bottom: 10px;
     text-align: center;
-
 }
+
 .text-container p {
     font-size: 16px;
     font-weight: 500;
@@ -78,34 +77,38 @@
     font-family: 'Goudy', regular;
     margin-bottom: 10px;
     text-align: center;
-
 }
 
 /* Proceso de trabajo */
-
 .work-process {
-    margin-top: -60px;
+    margin-top: -20px;
     display: flex;
-    justify-content: flex-end; /* Cambiado de flex-end a flex-start para alinear íconos a la izquierda */
-    gap: 20px; /* Ajusta el espacio entre los elementos si es necesario */
+    flex-direction: column; /* Configurar flex-direction en column para mantener consistencia */
+    justify-content: center;
+    gap: 20px;
     width: 100%;
     max-width: 800px;
-    text-align: left left;
-    
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .work-process {
+        flex-direction: row;
+        justify-content: space-around; /* Espacio alrededor de los elementos para mantener consistencia */
+    }
 }
 
 .work-process div {
-    text-align: center; /* Alinear el texto bajo los íconos hacia la izquierda */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    
-    
+    align-items: center;
+    flex: 1; /* Permitir que los elementos ocupen el mismo espacio */
 }
 
 .work-process img {
-    width: 70px; /* Ajustar tamaño de íconos */
+    width: 70px;
     height: 70px;
-    text-align: left left;
 }
 
 .work-process p {
@@ -113,17 +116,16 @@
     color: #A67C52;
     font-size: 18px;
     text-align: center;
-    
 }
 
 footer {
     text-align: center;
-    padding: 0; /* Eliminar padding */
-    background-color: transparent; /* Asegurar que no haya un color de fondo que cause espacio en blanco */
+    padding: 0;
+    background-color: transparent;
     width: 100%;
-    margin-top: 150px; /* Añadir un poco de espacio superior si es necesario */
-
-    
+    margin-top: 20px;
+    position: relative;
+    border-top: 1px solid #ccc;
 }
 
 footer img {
@@ -134,9 +136,8 @@ footer img {
 
 .footer-logo {
     position: absolute;
-    bottom: -300px; /* Ajusta según sea necesario */
-    right: 30px; /* Ajusta según sea necesario */
-    width: 40px; /* Ajusta el tamaño del logo */
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
     height: auto;
 }
-
