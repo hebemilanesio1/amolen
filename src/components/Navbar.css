@@ -42,27 +42,53 @@
   font-family: 'Montserrat', bold;
 }
 
+/* Ocultar el ícono del menú hamburguesa por defecto */
+.navbar-toggle {
+  display: none;
+}
+
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column; /* Cambiar dirección de los elementos */
-      align-items: flex-start; /* Alinear elementos al inicio */
-      padding: 1rem; /* Ajustar padding */
+    flex-direction: column; /* Cambiar dirección de los elementos */
+    align-items: flex-start; /* Alinear elementos al inicio */
+    padding: 1rem; /* Ajustar padding */
   }
 
   .navbar-links {
-      flex-direction: column; /* Cambiar dirección de los enlaces */
-      gap: 1rem; /* Ajustar espacio entre enlaces */
-      width: 100%;
+    flex-direction: column; /* Cambiar dirección de los enlaces */
+    gap: 1rem; /* Ajustar espacio entre enlaces */
+    width: 100%;
+    display: none; /* Ocultar enlaces por defecto */
+  }
+
+  .navbar-links.active {
+    display: flex; /* Mostrar enlaces cuando el menú esté activo */
   }
 
   .navbar-links li {
-      font-size: 1rem; /* Ajustar tamaño de fuente */
-      width: 100%;
-      text-align: left; /* Alinear texto a la izquierda */
+    font-size: 1rem; /* Ajustar tamaño de fuente */
+    width: 100%;
+    text-align: left; /* Alinear texto a la izquierda */
   }
 
   .navbar-links a {
-      padding: 0.5rem 0; /* Ajustar padding para enlaces */
+    padding: 0.5rem 0; /* Ajustar padding para enlaces */
+  }
+
+  .navbar-toggle {
+    display: flex; /* Mostrar el ícono del menú hamburguesa */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .navbar-toggle-icon {
+    width: 30px;
+    height: 1px;
+    background-color: #bc8741;
+    margin: 4px 0;
   }
 }
