@@ -61,7 +61,11 @@ const Estudios = () => {
       {/* Agregar el footer */}
       <footer>
         <img src={footerImage} alt="Footer" />
-        <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer">
+        <a 
+          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola, soy Marlen Morena😊. ¿En qué te puedo ayudar?✨👗")}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
           <img src={whatsappLogo} alt="WhatsApp Logo" className="footer-logo" />
         </a>
       </footer>
