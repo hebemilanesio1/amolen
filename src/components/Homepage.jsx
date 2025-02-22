@@ -56,7 +56,7 @@ const Homepage = () => {
       <footer>
         <img src={footerImage} alt="Footer" />
         <a 
-          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola, soy Marlen Morena😊. ¿En qué te puedo ayudar?✨👗")}`} 
+          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola, soy Marlen Morena. ¿En qué te puedo ayudar?")}`} 
           target="_blank" 
           rel="noopener noreferrer"
         >
